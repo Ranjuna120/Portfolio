@@ -131,4 +131,4 @@ If you find any issues or have questions, please open an issue in the repository
 
 ---
 
-**Made with ❤️ by Your Name**
+**Made with ❤️ by Rivith Ranjuna**
