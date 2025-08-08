@@ -1,0 +1,19 @@
+/* Debug CSS - Temporary */
+.certification-card {
+    border: 5px solid red !important;
+    background: yellow !important;
+}
+
+.certification-card h3 {
+    color: red !important;
+    font-size: 2rem !important;
+    background: white !important;
+    padding: 10px !important;
+}
+
+.certification-card p {
+    color: blue !important;
+    font-size: 1.5rem !important;
+    background: white !important;
+    padding: 5px !important;
+}
