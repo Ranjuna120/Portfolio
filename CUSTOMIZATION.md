@@ -13,8 +13,9 @@ This file contains instructions for customizing your portfolio website.
 - [ ] Lines 61-62: Update profile picture
 - [ ] Lines 80-88: Update about section text
 - [ ] Lines 101-105: Update project statistics
-- [ ] Lines 263-271: Update contact information
-- [ ] Line 303: Update footer copyright
+- [ ] Lines 210-280: Update certifications with your own achievements
+- [ ] Lines 401-440: Update contact information
+- [ ] Line 460: Update footer copyright
 
 ### 2. Images to Replace
 - Hero section profile picture (400x400px recommended)
@@ -36,7 +37,14 @@ Add/remove/modify skills based on your expertise:
 - Backend technologies
 - Tools and software
 
-### 5. Colors and Theme (style.css, lines 9-20)
+### 5. Certifications Section (index.html, lines 210-280)
+Add/update your professional certifications:
+- Certification title and description
+- Issuing organization
+- Issue date
+- Custom icons and colors for different cert types
+
+### 6. Colors and Theme (style.css, lines 9-20)
 Customize the color scheme by updating CSS variables:
 ```css
 --primary-color: #6366f1;    /* Main brand color */
@@ -58,8 +66,9 @@ Update your contact details in:
 - **Hero Section**: Lines 36-85
 - **About Section**: Lines 86-115
 - **Skills Section**: Lines 116-155
-- **Projects Section**: Lines 156-255
-- **Contact Section**: Lines 256-295
+- **Certifications Section**: Lines 210-280
+- **Projects Section**: Lines 281-400
+- **Contact Section**: Lines 401-440
 
 ### Styling (style.css)
 - **Color Variables**: Lines 9-20
