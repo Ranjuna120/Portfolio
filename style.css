@@ -99,6 +99,13 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 1rem;
+    position: relative;
+}
+
+.nav-container .nav-menu {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .nav-logo a {
@@ -143,6 +150,46 @@ body {
 .nav-link:hover::after,
 .nav-link.active::after {
     width: 100%;
+}
+
+/* CV Button Styles */
+.nav-actions {
+    display: flex;
+    align-items: center;
+}
+
+.cv-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1.2rem;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    box-shadow: var(--shadow-sm);
+    font-size: 0.875rem;
+}
+
+.cv-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+    background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
+}
+
+.cv-btn i {
+    font-size: 1rem;
+}
+
+.cv-btn span {
+    font-weight: 500;
+}
+
+/* Hide mobile CV link on desktop */
+.cv-mobile {
+    display: none;
 }
 
 .hamburger {
@@ -965,7 +1012,7 @@ body {
         display: flex;
     }
     
-    .nav-menu {
+    .nav-container .nav-menu {
         position: fixed;
         left: -100%;
         top: 70px;
@@ -976,10 +1023,40 @@ body {
         transition: 0.3s;
         box-shadow: var(--shadow-lg);
         padding: 2rem 0;
+        transform: none;
     }
     
     .nav-menu.active {
         left: 0;
+    }
+    
+    .nav-actions {
+        margin-right: 3rem;
+    }
+    
+    .cv-btn span {
+        display: none;
+    }
+    
+    .cv-btn {
+        padding: 0.7rem;
+        border-radius: 50%;
+        width: 45px;
+        height: 45px;
+        justify-content: center;
+    }
+    
+    .cv-mobile {
+        display: block !important;
+        background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+        color: white !important;
+        padding: 0.8rem 1.5rem;
+        border-radius: 25px;
+        margin-top: 1rem;
+    }
+    
+    .cv-mobile:hover {
+        background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
     }
     
     .hero-container {
