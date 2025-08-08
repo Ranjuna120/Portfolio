@@ -672,6 +672,7 @@ body {
     position: relative;
     overflow: hidden;
     height: 250px;
+    background-color: #f8f9fa;
 }
 
 .project-image img {
@@ -679,6 +680,8 @@ body {
     height: 100%;
     object-fit: cover;
     transition: transform 0.3s ease;
+    display: block;
+    background-color: #f8f9fa;
 }
 
 .project-card:hover .project-image img {
@@ -1018,11 +1021,13 @@ body {
         grid-template-columns: 1fr;
     }
     
+    .project-image {
+        height: 200px;
+    }
+
     .skills-content {
         grid-template-columns: 1fr;
-    }
-    
-    .skill-items {
+    }    .skill-items {
         grid-template-columns: repeat(2, 1fr);
     }
 }
@@ -1062,12 +1067,14 @@ body {
         align-items: center;
     }
     
+    .project-image {
+        height: 180px;
+    }
+
     .image-container {
         width: 250px;
         height: 250px;
-    }
-    
-    .float-element {
+    }    .float-element {
         width: 40px;
         height: 40px;
         font-size: 1rem;
