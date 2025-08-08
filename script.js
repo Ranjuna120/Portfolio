@@ -605,5 +605,34 @@ document.addEventListener('DOMContentLoaded', () => {
     // Initialize smooth animations
     animateOnScroll();
     
+    // CV Button functionality
+    const cvBtn = document.querySelector('.cv-btn');
+    if (cvBtn) {
+        cvBtn.addEventListener('click', (e) => {
+            // Add visual feedback
+            cvBtn.style.transform = 'scale(0.95)';
+            setTimeout(() => {
+                cvBtn.style.transform = '';
+            }, 150);
+            
+            // Track CV downloads (optional analytics)
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'download', {
+                    'event_category': 'CV',
+                    'event_label': 'Resume Download'
+                });
+            }
+        });
+        
+        // Add hover effect enhancement
+        cvBtn.addEventListener('mouseenter', () => {
+            cvBtn.style.background = 'linear-gradient(135deg, #8b5cf6, #6366f1)';
+        });
+        
+        cvBtn.addEventListener('mouseleave', () => {
+            cvBtn.style.background = 'linear-gradient(135deg, var(--primary-color), var(--secondary-color))';
+        });
+    }
+    
     console.log('Portfolio website initialized successfully! 🚀');
 });
