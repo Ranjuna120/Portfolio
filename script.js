@@ -97,7 +97,7 @@ backToTopBtn.addEventListener('click', () => {
 
 // Scroll animations
 const animateOnScroll = () => {
-    const elements = document.querySelectorAll('.section-header, .about-text, .about-image, .skill-category, .project-card, .contact-info, .contact-form');
+    const elements = document.querySelectorAll('.section-header, .about-text, .about-image, .skill-category, .certification-card, .project-card, .contact-info, .contact-form');
     
     elements.forEach(element => {
         const elementTop = element.getBoundingClientRect().top;
