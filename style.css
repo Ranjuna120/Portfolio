@@ -633,6 +633,171 @@ body {
     color: var(--text-primary);
 }
 
+/* Certifications Section */
+.certifications {
+    padding: 5rem 0;
+    background: var(--bg-secondary);
+    min-height: 400px;
+}
+
+.certifications-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.certification-card {
+    background: #ffffff !important;
+    padding: 2rem !important;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: visible;
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+    border: 2px solid #e5e7eb;
+    min-height: 200px;
+}
+
+.certification-card.animate {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+}
+
+.certification-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-xl);
+}
+
+.certification-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+}
+
+.cert-icon {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+}
+
+.cert-icon i {
+    font-size: 1.5rem;
+    color: white;
+}
+
+.cert-content {
+    position: relative;
+    z-index: 10;
+    width: 100%;
+    height: auto;
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+/* Complete reset for certification text elements */
+.certification-card * {
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+.certification-card h3,
+.certification-card p {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    color: inherit;
+}
+
+/* Force certification text visibility - Strong Override */
+.certifications .certification-card h3,
+.certifications .certification-card .cert-content h3,
+.certification-card h3 {
+    color: #000000 !important;
+    font-size: 1.25rem !important;
+    margin-bottom: 0.5rem !important;
+    line-height: 1.3 !important;
+    font-weight: 600 !important;
+    text-shadow: none !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    display: block !important;
+}
+
+.certifications .certification-card .cert-issuer,
+.certifications .certification-card p.cert-issuer,
+.certification-card .cert-issuer {
+    color: #6366f1 !important;
+    font-size: 1rem !important;
+    font-weight: 600 !important;
+    margin-bottom: 0.5rem !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    display: block !important;
+}
+
+.certifications .certification-card .cert-date,
+.certifications .certification-card p.cert-date,
+.certification-card .cert-date {
+    color: #374151 !important;
+    font-size: 0.875rem !important;
+    margin-bottom: 1rem !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    display: block !important;
+}
+
+.certifications .certification-card .cert-description,
+.certifications .certification-card p.cert-description,
+.certification-card .cert-description {
+    color: #6b7280 !important;
+    font-size: 0.9rem !important;
+    margin-bottom: 0.5rem !important;
+    font-style: italic !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    display: block !important;
+}
+
+.cert-badge {
+    position: absolute;
+    top: -5rem;
+    right: 1rem;
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(135deg, var(--accent-color), #fbbf24);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: var(--shadow-md);
+}
+
+.cert-badge.merit {
+    background: linear-gradient(135deg, #10b981, #059669);
+}
+
+.cert-badge.azure {
+    background: linear-gradient(135deg, #0078d4, #005a9e);
+}
+
+.cert-badge i {
+    font-size: 1rem;
+    color: white;
+}
+
 /* Projects Section */
 .projects {
     padding: 5rem 0;
@@ -1104,7 +1269,14 @@ body {
 
     .skills-content {
         grid-template-columns: 1fr;
-    }    .skill-items {
+    }
+    
+    .certifications-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .skill-items {
         grid-template-columns: repeat(2, 1fr);
     }
 }
@@ -1242,6 +1414,7 @@ body {
     
     .skill-item,
     .project-card,
+    .certification-card,
     .form-group input,
     .form-group textarea {
         background: var(--bg-secondary);
@@ -1249,8 +1422,66 @@ body {
         border-color: var(--border-color);
     }
     
+    .certification-card .cert-content h3 {
+        color: #f9fafb !important;
+    }
+    
+    .certification-card .cert-description {
+        color: #d1d5db !important;
+    }
+    
+    .certification-card .cert-issuer {
+        color: #8b5cf6 !important;
+    }
+    
+    .certification-card .cert-date {
+        color: #9ca3af !important;
+    }
+    
     .filter-btn {
         background: var(--bg-secondary);
         color: var(--text-secondary);
     }
+}
+
+/* FINAL OVERRIDE - Certification Text Visibility Fix */
+html body .certifications .certification-card h3,
+html body .certifications .certification-card .cert-content h3 {
+    color: #000000 !important;
+    font-size: 1.25rem !important;
+    font-weight: 700 !important;
+    margin-bottom: 0.5rem !important;
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    line-height: 1.3 !important;
+}
+
+html body .certifications .certification-card p.cert-issuer {
+    color: #6366f1 !important;
+    font-size: 1rem !important;
+    font-weight: 600 !important;
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    margin-bottom: 0.5rem !important;
+}
+
+html body .certifications .certification-card p.cert-date {
+    color: #374151 !important;
+    font-size: 0.875rem !important;
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    margin-bottom: 1rem !important;
+}
+
+html body .certifications .certification-card p.cert-description {
+    color: #6b7280 !important;
+    font-size: 0.9rem !important;
+    font-style: italic !important;
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    margin-bottom: 0.5rem !important;
 }
