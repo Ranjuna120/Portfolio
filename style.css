@@ -1481,3 +1481,87 @@ html body .certifications .certification-card p.cert-description {
     opacity: 1 !important;
     margin-bottom: 0.5rem !important;
 }
+
+/* Notification Styles - High Specificity */
+html body .notification {
+    position: fixed !important;
+    top: 20px !important;
+    right: 20px !important;
+    background: #ffffff !important;
+    color: #1f2937 !important;
+    border-radius: 10px !important;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15) !important;
+    z-index: 99999 !important;
+    transform: translateX(400px) !important;
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    max-width: 400px !important;
+    min-width: 300px !important;
+    border-left: 4px solid #6366f1 !important;
+    font-family: 'Poppins', sans-serif !important;
+    backdrop-filter: blur(10px) !important;
+}
+
+html body .notification.success {
+    border-left-color: #10b981 !important;
+    background: #f0fdf4 !important;
+}
+
+html body .notification.error {
+    border-left-color: #ef4444 !important;
+    background: #fef2f2 !important;
+}
+
+html body .notification.show {
+    transform: translateX(0) !important;
+}
+
+html body .notification-content {
+    padding: 1.25rem !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    gap: 1rem !important;
+}
+
+html body .notification-message {
+    color: #1f2937 !important;
+    font-weight: 500 !important;
+    font-size: 0.95rem !important;
+    line-height: 1.5 !important;
+    flex: 1 !important;
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+html body .notification.success .notification-message {
+    color: #065f46 !important;
+}
+
+html body .notification.error .notification-message {
+    color: #991b1b !important;
+}
+
+html body .notification-close {
+    background: none !important;
+    border: none !important;
+    font-size: 1.5rem !important;
+    cursor: pointer !important;
+    color: #6b7280 !important;
+    padding: 0 !important;
+    width: 28px !important;
+    height: 28px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    border-radius: 50% !important;
+    transition: all 0.2s ease !important;
+    flex-shrink: 0 !important;
+    font-weight: 700 !important;
+}
+
+html body .notification-close:hover {
+    color: #374151 !important;
+    background: rgba(0, 0, 0, 0.05) !important;
+    transform: scale(1.1) !important;
+}
