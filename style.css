@@ -1565,3 +1565,23 @@ html body .notification-close:hover {
     background: rgba(0, 0, 0, 0.05) !important;
     transform: scale(1.1) !important;
 }
+
+/* Email Link Styling */
+.email-link {
+    color: inherit !important;
+    text-decoration: none !important;
+    transition: all 0.3s ease !important;
+    border-radius: 4px !important;
+    padding: 2px 4px !important;
+    display: inline-block !important;
+}
+
+.email-link:hover {
+    color: var(--primary-color) !important;
+    background: rgba(99, 102, 241, 0.1) !important;
+    transform: translateX(2px) !important;
+}
+
+.email-link span {
+    transition: inherit !important;
+}
