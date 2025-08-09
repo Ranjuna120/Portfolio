@@ -233,20 +233,45 @@ contactForm.addEventListener('submit', (e) => {
         return;
     }
     
-    // Simulate form submission
+    // Real email sending with EmailJS
+    sendEmailWithEmailJS(formObject);
+});
+
+// EmailJS integration function (for real email sending)
+const sendEmailWithEmailJS = (formData) => {
     const submitButton = contactForm.querySelector('button[type="submit"]');
     const originalText = submitButton.textContent;
     
     submitButton.textContent = 'Sending...';
     submitButton.disabled = true;
     
-    setTimeout(() => {
+    // Initialize EmailJS - Replace with your actual public key
+    emailjs.init("YOUR_PUBLIC_KEY_HERE");
+    
+    // Send email to rivithranjuna60@gmail.com
+    emailjs.send("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", {
+        from_name: formData.name,
+        from_email: formData.email,
+        subject: formData.subject,
+        message: formData.message,
+        to_name: "Rivith Ranjuna",
+        to_email: "rivithranjuna60@gmail.com",
+        reply_to: formData.email
+    })
+    .then((response) => {
+        console.log('Email sent successfully!', response.status, response.text);
         showNotification('Message sent successfully! Thank you for getting in touch.', 'success');
         contactForm.reset();
         submitButton.textContent = originalText;
         submitButton.disabled = false;
-    }, 2000);
-});
+    })
+    .catch((error) => {
+        console.error('EmailJS error:', error);
+        showNotification('Failed to send message. Please try again later.', 'error');
+        submitButton.textContent = originalText;
+        submitButton.disabled = false;
+    });
+};
 
 // Email validation
 const isValidEmail = (email) => {
