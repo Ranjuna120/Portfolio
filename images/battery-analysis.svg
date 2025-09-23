@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800" role="img" aria-labelledby="title desc">
+  <title id="title">Battery Analytics Dashboard Illustration</title>
+  <desc id="desc">A stylized battery with charge bars and a dashboard card showing charts for capacity, temperature and voltage trends.</desc>
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f8fafc"/>
+      <stop offset="100%" stop-color="#eef2ff"/>
+    </linearGradient>
+    <linearGradient id="accentGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#22c55e"/>
+      <stop offset="100%" stop-color="#16a34a"/>
+    </linearGradient>
+    <linearGradient id="accentGradWarn" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#f59e0b"/>
+      <stop offset="100%" stop-color="#ef4444"/>
+    </linearGradient>
+    <filter id="cardShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#000" flood-opacity="0.12"/>
+    </filter>
+    <filter id="softShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="6" stdDeviation="10" flood-color="#000" flood-opacity="0.10"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect x="0" y="0" width="1200" height="800" fill="url(#bgGrad)"/>
+
+  <!-- Decorative circles -->
+  <circle cx="1080" cy="100" r="90" fill="#e0e7ff" opacity="0.5"/>
+  <circle cx="150" cy="680" r="70" fill="#d1fae5" opacity="0.45"/>
+
+  <!-- Title -->
+  <g transform="translate(80, 120)">
+    <text x="0" y="0" font-family="Poppins, Segoe UI, system-ui, sans-serif" font-weight="700" font-size="36" fill="#111827">Battery-Analytics-Core</text>
+    <text x="0" y="28" font-family="Poppins, Segoe UI, system-ui, sans-serif" font-size="16" fill="#6b7280">Telemetry • Health • Capacity • Temperature • Voltage</text>
+  </g>
+
+  <!-- Battery module -->
+  <g transform="translate(80, 200)" filter="url(#softShadow)">
+    <!-- Battery body -->
+    <rect x="0" y="0" rx="20" ry="20" width="420" height="220" fill="#0f172a"/>
+    <!-- Battery tip -->
+    <rect x="420" y="70" rx="8" ry="8" width="26" height="80" fill="#334155"/>
+    <!-- Battery inner -->
+    <rect x="20" y="30" rx="12" ry="12" width="380" height="160" fill="#111827" stroke="#1f2937" stroke-width="2"/>
+
+    <!-- Charge bars -->
+    <g transform="translate(34, 46)">
+      <rect width="60" height="128" rx="8" fill="url(#accentGrad)"/>
+      <rect x="80" width="60" height="128" rx="8" fill="url(#accentGrad)" opacity="0.9"/>
+      <rect x="160" width="60" height="128" rx="8" fill="url(#accentGrad)" opacity="0.8"/>
+      <rect x="240" width="60" height="128" rx="8" fill="url(#accentGrad)" opacity="0.72"/>
+      <rect x="320" width="60" height="128" rx="8" fill="url(#accentGradWarn)" opacity="0.9"/>
+    </g>
+
+    <!-- Battery label -->
+    <g transform="translate(24, 206)">
+      <circle cx="10" cy="-6" r="6" fill="#22c55e"/>
+      <text x="24" y="-2" font-family="Poppins, Segoe UI, system-ui, sans-serif" font-size="14" fill="#e5e7eb">Charge Status</text>
+    </g>
+  </g>
+
+  <!-- Dashboard card -->
+  <g transform="translate(540, 190)" filter="url(#cardShadow)">
+    <rect width="580" height="420" rx="18" fill="#ffffff"/>
+
+    <!-- Card header -->
+    <g transform="translate(24, 24)">
+      <text x="0" y="0" font-family="Poppins, Segoe UI, system-ui, sans-serif" font-weight="600" font-size="20" fill="#111827">Telemetry Dashboard</text>
+      <text x="0" y="26" font-family="Poppins, Segoe UI, system-ui, sans-serif" font-size="13" fill="#6b7280">Last 24 hours • device LAPTOP-XXXX</text>
+    </g>
+
+    <!-- KPI chips -->
+    <g transform="translate(24, 74)">
+      <g>
+        <rect width="160" height="64" rx="12" fill="#f8fafc" stroke="#e5e7eb"/>
+        <text x="16" y="24" font-family="Poppins, Segoe UI, system-ui, sans-serif" font-size="12" fill="#6b7280">Capacity</text>
+        <text x="16" y="46" font-family="Poppins, Segoe UI, system-ui, sans-serif" font-weight="700" font-size="18" fill="#111827">82%</text>
+      </g>
+      <g transform="translate(184, 0)">
+        <rect width="160" height="64" rx="12" fill="#f8fafc" stroke="#e5e7eb"/>
+        <text x="16" y="24" font-family="Poppins, Segoe UI, system-ui, sans-serif" font-size="12" fill="#6b7280">Temperature</text>
+        <text x="16" y="46" font-family="Poppins, Segoe UI, system-ui, sans-serif" font-weight="700" font-size="18" fill="#111827">36.8°C</text>
+      </g>
+      <g transform="translate(368, 0)">
+        <rect width="160" height="64" rx="12" fill="#f8fafc" stroke="#e5e7eb"/>
+        <text x="16" y="24" font-family="Poppins, Segoe UI, system-ui, sans-serif" font-size="12" fill="#6b7280">Voltage</text>
+        <text x="16" y="46" font-family="Poppins, Segoe UI, system-ui, sans-serif" font-weight="700" font-size="18" fill="#111827">11.52V</text>
+      </g>
+    </g>
+
+    <!-- Chart area -->
+    <g transform="translate(24, 170)">
+      <rect width="532" height="210" rx="12" fill="#f8fafc" stroke="#e5e7eb"/>
+
+      <!-- Grid lines -->
+      <g stroke="#e5e7eb" stroke-width="1">
+        <line x1="0" y1="42" x2="532" y2="42"/>
+        <line x1="0" y1="84" x2="532" y2="84"/>
+        <line x1="0" y1="126" x2="532" y2="126"/>
+        <line x1="0" y1="168" x2="532" y2="168"/>
+      </g>
+
+      <!-- Bars (capacity) -->
+      <g transform="translate(22, 22)">
+        <rect x="0" y="72" width="20" height="96" rx="4" fill="#86efac"/>
+        <rect x="40" y="60" width="20" height="108" rx="4" fill="#4ade80"/>
+        <rect x="80" y="52" width="20" height="116" rx="4" fill="#22c55e"/>
+        <rect x="120" y="64" width="20" height="104" rx="4" fill="#16a34a"/>
+        <rect x="160" y="78" width="20" height="90" rx="4" fill="#15803d"/>
+      </g>
+
+      <!-- Line (temperature) -->
+      <polyline fill="none" stroke="#f59e0b" stroke-width="3"
+        points="240,160 280,148 320,156 360,138 400,132 440,118 480,124 512,110" />
+      <circle cx="512" cy="110" r="4" fill="#f59e0b"/>
+
+      <!-- Line (voltage) -->
+      <polyline fill="none" stroke="#3b82f6" stroke-width="3"
+        points="240,186 280,176 320,168 360,172 400,160 440,156 480,150 512,146" />
+      <circle cx="512" cy="146" r="4" fill="#3b82f6"/>
+
+      <!-- Legend -->
+      <g transform="translate(18, 186)" font-family="Poppins, Segoe UI, system-ui, sans-serif" font-size="12">
+        <rect x="0" y="-10" width="10" height="10" rx="2" fill="#22c55e"/>
+        <text x="16" y="0" fill="#374151">Capacity</text>
+        <rect x="96" y="-10" width="10" height="10" rx="2" fill="#f59e0b"/>
+        <text x="112" y="0" fill="#374151">Temperature</text>
+        <rect x="210" y="-10" width="10" height="10" rx="2" fill="#3b82f6"/>
+        <text x="226" y="0" fill="#374151">Voltage</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- Footer note -->
+  <g transform="translate(80, 740)">
+    <text x="0" y="0" font-family="Poppins, Segoe UI, system-ui, sans-serif" font-size="12" fill="#94a3b8">SVG illustration • scalable and lightweight</text>
+  </g>
+</svg>
