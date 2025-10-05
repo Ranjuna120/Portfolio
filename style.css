@@ -1336,16 +1336,7 @@ body {
         --bg-secondary: #1f2937;
         --border-color: #374151;
     }
-    /* Manual Dark Theme Toggle */
-    .dark-theme {
-        --text-primary: #f9fafb;
-        --text-secondary: #d1d5db;
-        --text-light: #9ca3af;
-        --bg-primary: #111827;
-        --bg-secondary: #1f2937;
-        --border-color: #374151;
-    }
-    
+   
     .navbar {
         background: rgba(17, 24, 39, 0.9);
     }
